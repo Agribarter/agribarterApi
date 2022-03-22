@@ -17,7 +17,7 @@
     "stripe": "^8.207.0"
   },
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "name": "backend",
   "version": "1.0.0",
