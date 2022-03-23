@@ -13,13 +13,8 @@ const ProduceRoute = require("./routes/produceRoutes");
 const CartRoute = require("./routes/CartRoute");
 const AdminRoute = require("./routes/AdminIRoutes");
 
-// const api = require("./version/vversion1");
-
 const { notFound, errorHandler } = require("./middlewares/ErrorHandler");
 
-// const upload = require("./middlewares/multer");
-
-// const uploadPhotos = require("./middlewares/uploadPhoto");
 const app = express();
 connectDB();
 
@@ -38,7 +33,6 @@ app.use(morgan("combined"));
 app.use(bodyParser.json());
 app.use(cors());
 
-// app.use("/upload-images", upload.array("image"), uploadPhotos);
 app.use("/api/user", UserRoute);
 app.use("/api/farmer", FarmerRoute);
 app.use("/api/investor", InvestorRoute);

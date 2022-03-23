@@ -18,7 +18,7 @@ const getOneInputRequest = asyncHandler(async (req, res) => {
     const getOne = await Input.findById(req.params.id);
     const { phoneNumber } = getOne;
     const getUser = await User.find({ phoneNumber }).select("-password");
-    res.status(200).json({ getOne, ...getUser });
+    res.status(200).json({ ...getOne, ...getUser });
   } catch (error) {
     res.status(400).json(error);
   }
